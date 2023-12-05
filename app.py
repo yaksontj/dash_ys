@@ -83,4 +83,4 @@ if select_branch == '전체':
 else:
     tmp_df = df_static[df_static['b_name']== select_branch][['b_name','payment_price']].sort_values('payment_price',ascending=False)
     # 선택한 종의 맨 처음 5행을 보여줍니다
-    st.table(tmp_df)'''
+    st.table(tmp_df)

@@ -1,5 +1,5 @@
 import streamlit as st
-import pymysql
+import PyMySQL
 import datetime
 import time
 import os

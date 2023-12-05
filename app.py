@@ -43,7 +43,7 @@ st.sidebar.title('branch')
 
 # select_species 변수에 사용자가 선택한 값이 지정됩니다
 select_branch = st.sidebar.selectbox(
-    '확인하고 싶은 매장명을 선택하세요', branch_list
+    '확인하고 싶은 매장명을 선택하세요', branch_dict
 )
 
 # 원래 dataframe으로 부터 꽃의 종류가 선택한 종류들만 필터링 되어서 나오게 일시적인 dataframe을 생성합니다

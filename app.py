@@ -30,7 +30,6 @@ branch_list = df_branch['b_name'].tolist()
 
 st.text('약손명가 대시보드')
 
-
 # 사이드바에 select box를 활용하여 종을 선택한 다음 그에 해당하는 행만 추출하여 데이터프레임을 만들고자합니다.
 st.sidebar.title('매장명')
 
@@ -46,9 +45,5 @@ st.table(tmp_df.head())
 
 
 
-df = pd.DataFrame({
-  'first column': [1, 2, 3, 4],
-  'second column': [10, 20, 30, 40]
-})
 
 st.write(df)

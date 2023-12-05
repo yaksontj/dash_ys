@@ -6,6 +6,7 @@ import pandas as pd
 # 사이드바에 select box를 활용하여 종을 선택한 다음 그에 해당하는 행만 추출하여 데이터프레임을 만들고자합니다.
 st.sidebar.title('branch')
 
+'''
 conn_yakson = pymysql.connect(host = '139.150.65.14', user = 'yaksonbon', password= 'yakson!@#bon)(*', db='yakson', charset='utf8',
                       cursorclass=pymysql.cursors.DictCursor)
 cur_yakson = conn_yakson.cursor()
@@ -82,4 +83,4 @@ if select_branch == '전체':
 else:
     tmp_df = df_static[df_static['b_name']== select_branch][['b_name','payment_price']].sort_values('payment_price',ascending=False)
     # 선택한 종의 맨 처음 5행을 보여줍니다
-    st.table(tmp_df)
+    st.table(tmp_df)'''

@@ -1,9 +1,4 @@
 streamlit
 pymysql
 datetime
-time
-os
-numpy
-math
 pandas
-matplotlib

@@ -1,9 +1,9 @@
-import streamlit as st
-import pymysql
-import datetime
-import time
-import os
-import numpy as np
-import math
-import pandas as pd
-import matplotlib.pyplot as plt
+streamli
+pymysql
+datetime
+time
+os
+numpy
+math
+pandas
+matplotlib

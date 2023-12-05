@@ -1,5 +1,5 @@
 import streamlit as st
-import PyMySQL==1.1.0
+import pymysql
 import datetime
 import time
 import os

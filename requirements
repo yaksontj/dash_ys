@@ -1,3 +1,5 @@
+pip install pymysql
+
 import streamlit as st
 import pymysql
 from sqlalchemy import create_engine

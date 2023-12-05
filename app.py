@@ -36,19 +36,19 @@ branch_dict = df_branch['b_name'].to_dict()
 df_rs.loc[df_rs[df_rs['use_flat'] > 0].index, 'payment_price'] = 0
 df_static = df_rs[['b_idx','payment_price']].groupby('b_idx').sum()
 
-df_static = df.merge(df_branch, df_static, how = 'left', on ='b_idx')
+df_static = pd.merge(df_branch, df_static, how = 'left', on ='b_idx')
 
 # 사이드바에 select box를 활용하여 종을 선택한 다음 그에 해당하는 행만 추출하여 데이터프레임을 만들고자합니다.
 st.sidebar.title('branch')
 
 # select_species 변수에 사용자가 선택한 값이 지정됩니다
 select_branch = st.sidebar.selectbox(
-    '확인하고 싶은 매장명을 선택하세요', branch_lit
+    '확인하고 싶은 매장명을 선택하세요', branch_list
 )
 
 # 원래 dataframe으로 부터 꽃의 종류가 선택한 종류들만 필터링 되어서 나오게 일시적인 dataframe을 생성합니다
 if select_branch == '전체':
-    tmp_df = df_static[df_static[payment_price]>0]
+    tmp_df = df_static[df_static['payment_price']>0]
     st.table(tmp_df.head())
 else:
     tmp_df = df_static[df_static['b_name']== select_branch]

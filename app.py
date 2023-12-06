@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import streamlit as st
 import pymysql
 import datetime
@@ -85,7 +84,7 @@ else:
     tmp_df = df_static[df_static['b_name']== select_branch][['b_name','payment_price']].sort_values('payment_price',ascending=False)
     # 선택한 종의 맨 처음 5행을 보여줍니다
     st.table(tmp_df)
-=======
+
 import streamlit as st
 import pymysql
 import datetime
@@ -139,18 +138,18 @@ for i in range(0, 12):
             month_dict[str(a + i)+'월']= '0' + str(a + i)
 
 select_year = st.sidebar.selectbox(
-    '확인하고 싶은 년도를 선택하세요', ['2023']
+    '확인하고 싶은 년도를 선택하세요', ['2023'], key="option_tab1"
 )
 
 select_month = st.sidebar.selectbox(
-    '확인하고 싶은 월을 선택하세요', list(month_dict.keys())
+    '확인하고 싶은 월을 선택하세요', list(month_dict.keys()), key="option_tab2"
 )
 
 branch_dict = df_branch['b_name'].to_dict()
 
 # select_species 변수에 사용자가 선택한 값이 지정됩니다
 select_branch = st.sidebar.selectbox(
-    '확인하고 싶은 매장명을 선택하세요', ['전체']+list(branch_dict.values())
+    '확인하고 싶은 매장명을 선택하세요', ['전체']+list(branch_dict.values()), key="option_tab3"
 )
 
 

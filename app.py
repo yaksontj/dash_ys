@@ -172,4 +172,3 @@ else:
     tmp_df = df_static[df_static['b_name']== select_branch][['b_name','payment_price']].sort_values('payment_price',ascending=False)
     # 선택한 종의 맨 처음 5행을 보여줍니다
     st.table(tmp_df)
->>>>>>> 2c032547c15a8080d5fa7ad656115469b4b4f98a

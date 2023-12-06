@@ -7,7 +7,7 @@ import pandas as pd
 st.sidebar.title('매장명')
 
 
-conn_yakson = pymysql.connect(host = '139.150.65.14', user = 'yaksonbon', password= 'yakson!@#bon)(*', db='yakson', charset='utf8',
+conn_yakson = pymysql.connect(host = '139.150.65.14', user = 'yaksonbon', password= 'yakson!@#bon)(*', db='yakson', charset='utf8', port=3306
                       cursorclass=pymysql.cursors.DictCursor)
 cur_yakson = conn_yakson.cursor()
 
